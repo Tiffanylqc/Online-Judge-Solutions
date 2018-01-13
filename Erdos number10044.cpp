@@ -4,8 +4,8 @@
 #include <queue>
 #include <set>
 using namespace std;
-//gerg
 
+int numwef;
 
 #define ERDOS "Erdos, P."
 
