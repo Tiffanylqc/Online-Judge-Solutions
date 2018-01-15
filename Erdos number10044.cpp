@@ -5,8 +5,6 @@
 #include <set>
 using namespace std;
 
-int numwef;
-
 #define ERDOS "Erdos, P."
 
 map<string,int> nameToid;
