@@ -121,15 +121,11 @@ long long pokerHandRank(Card* hand){
 
     if(isFlush(hand)){
         rank+=FLUSH;
-//        cout<<rank<<endl;
         rank+=pow(2,hand[0].valueInt-2);
 
-//        cout<<rank<<endl;
         for(int i=1;i<5;i++)
             if(hand[i].valueInt!=hand[i-1].valueInt)
                 rank+=pow(2,hand[i].valueInt-2);
-//        cout<<rank<<endl;
-//        cout<<endl;
         return rank;
     }
 
