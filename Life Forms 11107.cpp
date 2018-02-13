@@ -8,7 +8,7 @@ using namespace std;
 
 typedef pair<int, int> ii;
 
-#define MAX_N 100111                         // second approach: O(n log n)
+#define MAX_N 100111                         
 int T[MAX_N];                   // the input string, up to 100K characters
 int n;                                        // the length of input string
 int RA[MAX_N], tempRA[MAX_N];        // rank array and temporary rank array
@@ -23,8 +23,8 @@ int PLCP[MAX_N];
 int LCP[MAX_N];  // LCP[i] stores the LCP between previous suffix T+SA[i-1]
 // and current suffix T+SA[i]
 
-void countingSort(int k) {                                          // O(n)
-    int i, sum, maxi = max(300, n);   // up to 255 ASCII chars or length of n
+void countingSort(int k) {                                         
+    int i, sum, maxi = max(300, n);   
     memset(c, 0, sizeof c);                          // clear frequency table
     for (i = 0; i < n; i++)       // count the frequency of each integer rank
         c[i + k < n ? RA[i + k] : 0]++;
@@ -37,7 +37,7 @@ void countingSort(int k) {                                          // O(n)
         SA[i] = tempSA[i];
 }
 
-void constructSA() {         // this version can go up to 100000 characters
+void constructSA() {         
     int i, k, r;
     for (i = 0; i < n; i++) RA[i] = T[i];                 // initial rankings
     for (i = 0; i < n; i++) SA[i] = i;     // initial SA: {0, 1, 2, ..., n-1}
